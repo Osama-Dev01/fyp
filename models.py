@@ -28,6 +28,7 @@ class User(Base):
     password = Column(String(100), nullable=False)
     city = Column(String(50))
     occupation = Column(String(50))
+    profile_picture_url = Column(String(255), nullable=True, default='default_avatar.png')
     role = Column(Enum(UserRole), nullable=False)
     approval_status = Column(Enum(ApprovalStatus), default=ApprovalStatus.pending)
     is_active = Column(Boolean, default=True)
